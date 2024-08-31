@@ -40,6 +40,26 @@ describe('Library', () => {
     test('should not borrow a book that does not exist', () => {
         expect(() => library.borrowBook('999')).toThrow('Book not found');
     });
+
+    test('should return a borrowed book', () => {
+        const book = new Book('123', 'Test Book', 'Author', 2021);
+        library.addBook(book);
+        library.borrowBook('123');
+        library.returnBook('123');
+        const availableBooks = library.viewAvailableBooks();
+        expect(availableBooks).toHaveLength(1);
+        expect(availableBooks[0].isbn).toBe('123');
+    });
+
+    test('should not return a book that was not borrowed', () => {
+        const book = new Book('123', 'Test Book', 'Author', 2021);
+        library.addBook(book);
+        expect(() => library.returnBook('123')).toThrow('Book is not borrowed');
+    });
+
+    test('should not return a book that does not exist', () => {
+        expect(() => library.returnBook('999')).toThrow('Book not found');
+    });
 });
 
 

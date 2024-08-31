@@ -24,4 +24,15 @@ export class Library {
         }
         book.available = false;
     }
+
+    returnBook(isbn: string): void {
+        const book = this.books.get(isbn);
+        if (!book) {
+            throw new Error('Book not found');
+        }
+        if (book.available) {
+            throw new Error('Book is not borrowed');
+        }
+        book.available = true;
+    }
 }

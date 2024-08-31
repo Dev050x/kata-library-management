@@ -60,6 +60,12 @@ describe('Library', () => {
     test('should not return a book that does not exist', () => {
         expect(() => library.returnBook('999')).toThrow('Book not found');
     });
+
+    test('should return a borrowed book', () => {
+        const book = new Book('123', 'Test Book', 'Author', 2021);
+        library.addBook(book);
+        library.borrowBook
+    });
 });
 
 

@@ -33,16 +33,16 @@ This project is a simple library management system implemented in TypeScript. It
     ```bash
     npx tsc
     ```
-**Running the Project**
+### Running the Project
 Since this project is designed to be run as a Node.js application, there is no web server or UI component. However, you can interact with it through unit tests or add a custom script to integrate with a UI.
 
-**Running Tests**
+## Running Tests
 The project uses Jest for testing. You can run the tests with:
     ```bash
     npx jest
     ```
 
-**Project Structure**
+## Project Structure
 src/: Contains TypeScript source files.
 Book.ts: Defines the Book class.
 Library.ts: Defines the Library class.
@@ -52,8 +52,8 @@ Library.test.ts: Contains tests for the Library class.
 tsconfig.json: TypeScript configuration file.
 package.json: Project metadata and dependencies.
 
-**Usage**
+## Usage
 To use the library management system, you can modify the src/main.ts file to include a script that interacts with the Library class or integrate it into a UI as needed.
 
-**Contributing**
+## Contributing
 Feel free to submit issues or pull requests to improve the project. Contributions are welcome!

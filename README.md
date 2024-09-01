@@ -31,6 +31,7 @@ This project is a simple library management system implemented in TypeScript. It
 3. **Build the Project**
     Compile the TypeScript code to JavaScript:
     ```bash
+    mkdir dist
     npx tsc
     ```
 ### Running the Project
